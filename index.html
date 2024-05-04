@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hoja de vida</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <p class="logo">Lady Espinel</p>
+        <nav>
+          <a href="#hero">sobre mí</a>
+          <a href="#experiencialaboral">proyectos</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+      </div>
+    </header>
+    <section id="hero">
+      <h1>
+        Sobre mí <br />
+        Informacion basica
+      </h1>
+      <button onclick="descargarArchivo()">Conoce mi perfil</button>
+      <script>
+        function descargarArchivo() {
+          // Crear un enlace temporal
+          var enlace = document.createElement("a");
+          enlace.href = "archivos/HV.pdf"; // Cambia 'ruta/al/archivo/archivo-a-descargar.txt' por la ruta de tu archivo
+          enlace.download = "Ldyespinel.pdf"; // Cambia 'nombre-del-archivo.txt' por el nombre que deseas darle al archivo
+          document.body.appendChild(enlace);
+          enlace.click();
+          document.body.removeChild(enlace);
+        }
+      </script>
+    </section>
+
+    <section id="experiencialaboral">
+      <div class="container">
+        <h2>Proyectos</h2>
+        <div class="laboral">
+          <div class="carta">
+            <h3>Calculadora</h3>
+            <p>Se crea Calculadora en HTML, JavaScript y Css</p>
+            
+            <a  href="https://github.com/Laespi/Calculadora"><button>Conoce más</button></a>
+
+          </div>
+          <div class="carta">
+            <h3>Login</h3>
+            <p>
+              Se crea Login en HTML,php y Css y conexion a Mysql
+            </p>
+            <a  href="https://github.com/Laespi/login"><button>Conoce más</button></a>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto">
+      <div class="container">
+        <ul>
+          <li>Correo electronico: Lady_espinel@hotmail.com</li>
+          <li>Telefono:312 4602345</li>
+          <li>Pais: Colombia</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="hablame">
+      <h2>habla con migo</h2>
+      <a  href="https://api.whatsapp.com/send/?phone=573124602345"><button>whatsapp</button></a>
+    </section>
+
+    <footer>
+      <div class="container"></div>
+    </footer>
+  </body>
+</html>
